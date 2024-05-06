@@ -1,0 +1,250 @@
+﻿<Window x:Class="QL_KTX_SV.traphong"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QL_KTX_SV"
+        mc:Ignorable="d"
+        Title="Trả Phong" Height="Auto" Width="807">
+    <Grid>
+
+        <local:CommonControl></local:CommonControl>
+
+        <Grid Margin="0,-32,0,0" Height="452" VerticalAlignment="Top">
+
+
+
+
+
+            <Border BorderThickness="1" CornerRadius="5" Margin="10,69,10,19" BorderBrush="#FF201C1C" Background="#FFD6CDCD">
+
+                <Grid Margin="19,39,0,120" HorizontalAlignment="Left" Width="564">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="31*"/>
+                        <ColumnDefinition Width="21*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Mã Sinh Viên :" VerticalAlignment="Top" Height="28" Margin="8,41,39,0"/>
+                    <TextBlock x:Name="tb_ma" Margin="110,45,229,0" VerticalAlignment="Top"  Background="White" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="109,13,68,172" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+
+                    <Label Content="Tên Sinh Viên :" VerticalAlignment="Top" Height="28" Margin="8,8,34,0"/>
+                    <TextBlock x:Name="tb_ten" Margin="110,14,70,0" Background="White" VerticalAlignment="Top" AutomationProperties.Name="ten_sv" Grid.ColumnSpan="2"/>
+
+                    <Label Content="Ngày Sinh :" VerticalAlignment="Top" Height="28" Margin="16,40,153,0" RenderTransformOrigin="0.832,0.591" Grid.Column="1"/>
+                    <TextBlock x:Name="tb_ns" Margin="84,45,69,0" Background="White" VerticalAlignment="Top" Grid.Column="1"/>
+
+                    <Label Content="Giới Tính :" VerticalAlignment="Top" Height="28" Margin="8,74,109,0" Grid.ColumnSpan="2"/>
+
+                    <Label Content="Quê :" VerticalAlignment="Top" Height="28" Margin="10,107,38,0"/>
+                    <TextBlock Background="White" x:Name="cb_que" HorizontalAlignment="Left" Margin="106,114,0,0" VerticalAlignment="Top" Width="199" Grid.ColumnSpan="2"/>
+
+                    <Label Content="Khoa :" VerticalAlignment="Top" Height="28" Margin="10,141,60,0"/>
+                    <TextBlock Background="White" x:Name="cb_khoa" HorizontalAlignment="Left" Margin="106,146,0,0" VerticalAlignment="Top" Width="199" Grid.ColumnSpan="2"/>
+
+                    <Label Content="Mã Lớp :" VerticalAlignment="Top" Height="28" Margin="9,174,0,0" HorizontalAlignment="Left" Width="102"/>
+                    <TextBlock Background="White" x:Name="cb_lop" HorizontalAlignment="Left" Margin="106,179,0,0" VerticalAlignment="Top" Width="199" Grid.ColumnSpan="2"/>
+                    <RadioButton x:Name="rd_nam" Content="Nam" HorizontalAlignment="Left" Margin="106,81,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rd_nu" Grid.Column="1" Content="Nữ" HorizontalAlignment="Left" Margin="67,81,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.08,-1.495"/>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="109,44,228,141" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="83,44,68,142" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+
+
+                </Grid>
+            </Border>
+            <Border BorderBrush="#FF0F0F0F" BorderThickness="1" CornerRadius="5" Margin="405,87,47,39" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}">
+                <Border.Effect>
+                    <DropShadowEffect/>
+                </Border.Effect>
+                <Grid Margin="-17,9,3,9">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="133*"/>
+                        <RowDefinition Height="20*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Tiền Nhà :" VerticalAlignment="Top" Height="28" Margin="42,2,14,0"/>
+                    <TextBlock x:Name="tb_tienha" Margin="10,7,23,0" VerticalAlignment="Top"  Background="White" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Height="19"/>
+
+                    <Label Content="Tiền điện :" VerticalAlignment="Top" Height="28" Margin="42,34,0,0"/>
+                    <TextBlock x:Name="tb_tiendien" Margin="10,40,23,0" Background="White" VerticalAlignment="Top" AutomationProperties.Name="ten_sv" Grid.Column="1"/>
+
+                    <Label Content="Tiền nước :" VerticalAlignment="Top" Height="28" Margin="42,67,28,0" RenderTransformOrigin="0.832,0.591"/>
+                    <TextBlock x:Name="tb_nuoc" Margin="10,71,23,0" Background="White" VerticalAlignment="Top" Grid.Column="1"/>
+
+                    <Label Content="Tiền vệ sinh :" VerticalAlignment="Top" Height="28" Margin="42,132,4,0"/>
+                    <TextBlock x:Name="tb_vs" Margin="10,136,23,0" Background="White" VerticalAlignment="Top" Grid.Column="1" Text=""/>
+
+                    <Label Content="Tiền Phạt" VerticalAlignment="Top" Height="28" Margin="42,99,1,0"/>
+                    <TextBlock x:Name="tb_tp" Margin="10,103,23,0" Background="White" VerticalAlignment="Top" Grid.Column="1" Text="" RenderTransformOrigin="0.52,0.554"/>
+
+                    <Label Content="Phòng :" VerticalAlignment="Top" Height="28" Margin="42,160,28,0"/>
+                    <TextBlock x:Name="tb_phong" Margin="10,164,23,0" Background="White" VerticalAlignment="Top" Grid.Column="1" Text=""/>
+
+                    <Label Content="Ngày bắt đầu :" VerticalAlignment="Top" Height="28" Margin="42,187,0,0" HorizontalAlignment="Left" Width="102"/>
+                    <TextBlock x:Name="tb_nbd" Margin="10,193,23,0" Background="White" VerticalAlignment="Top" Grid.Column="1" Text=""/>
+
+                    <Label Content="Ngày kết thúc :" VerticalAlignment="Top" Height="28" Margin="42,217,1,0"/>
+                    <TextBlock x:Name="tb_nkt" Margin="10,221,23,0" Background="White" VerticalAlignment="Top" Grid.Column="1" Text=""/>
+
+                    <Label Content="Ngày thanh toán :" VerticalAlignment="Top" Height="28" Margin="42,247,1,0" Grid.RowSpan="2"/>
+                    <TextBlock x:Name="tb_ntt" Margin="10,252,23,0" Background="White" VerticalAlignment="Top" Grid.Column="1" Text="" Grid.RowSpan="2"/>
+
+                    <Label Content="Thành tiền :" VerticalAlignment="Top" Height="28" Margin="43,13,27,0" Grid.Row="1"/>
+                    <TextBlock x:Name="tb_total" Margin="10,18,23,0" Background="White" VerticalAlignment="Top" Grid.Column="1" Text="" Grid.Row="1"/>
+
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="10,7,23,239" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="9,39,23,210" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="9,70,23,178" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="9,102,23,147" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="9,135,23,113" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="9,163,23,86" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="9,192,23,57" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="9,220,23,29" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="9,252,23,38" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.RowSpan="2">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="9,18,23,6" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="-332,234,210,19" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+                        <Border.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Border.RenderTransform>
+                    </Border>
+
+                </Grid>
+            </Border>
+
+
+            <Label Content="Thông tin hóa đơn" HorizontalAlignment="Left" Margin="331,32,0,0" VerticalAlignment="Top" FontSize="20"/>
+
+            <Button x:Name="btn_datphong" Content="Trả Phòng" Height="32" Click="btn_Them_Click" Background="#FF8C8C8C" Margin="75,343,624,77"/>
+            <Button x:Name="btn_ql" Content="Quay Lại" Height="32"  Background="#FF8C8C8C" Margin="201,343,498,77" Click="btn_ql_Click"/>
+        </Grid>
+
+    </Grid>
+
+</Window>

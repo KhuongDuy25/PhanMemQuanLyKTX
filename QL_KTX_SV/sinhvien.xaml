@@ -1,0 +1,167 @@
+﻿<Window x:Class="QL_KTX_SV.sinhvien"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QL_KTX_SV"
+        mc:Ignorable="d"
+        Title="sinhvien" Height="535" Width="672">
+    <Grid Margin="0,0,2,-159">
+        <local:CommonControl></local:CommonControl>
+        <Grid RenderTransformOrigin="0.581,0.624" Margin="7,-58,4,0" Height="586" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="0*"/>
+            </Grid.RowDefinitions>
+
+
+
+            <Label Content="Tìm kiếm :" HorizontalAlignment="Left" Margin="352,263,0,0" VerticalAlignment="Top" Height="26" Width="64" RenderTransformOrigin="0.622,-2.891"/>
+            <TextBox x:Name="tb_search"  HorizontalAlignment="Left" Margin="354,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="22" TextChanged="tb_search_TextChanged" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.036"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <Button x:Name="search"  Content="Tìm Kiếm" HorizontalAlignment="Left" Margin="570,280,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.49,-0.218" Height="34" Width="65" Click="search_Click" />
+            <DataGrid Grid.Row="0" x:Name="dataGrid1" AutoGenerateColumns="True"  Margin="11,90,14,363" SelectionChanged="dataGrid1_SelectionChanged">
+                <DataGrid.Effect>
+                    <DropShadowEffect/>
+                </DataGrid.Effect>
+            </DataGrid>
+            <ComboBox x:Name="cb_tp" HorizontalAlignment="Left" Margin="433,354,0,0" VerticalAlignment="Top" Width="120" Height="22"/>
+            <Button x:Name="bt_tkp"  Content="Tìm Kiếm" HorizontalAlignment="Left" Margin="569,344,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.49,-0.218" Height="33" Width="65" Click="bt_tkp_Click" />
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="229" Margin="345,260,0,0" VerticalAlignment="Top" Width="301"/>
+
+        </Grid>
+
+
+        <Border BorderBrush="#FF9DA3A2" BorderThickness="1" CornerRadius="5" Margin="18,181,327,0" Height="320" VerticalAlignment="Top">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.061"/>
+                    <GradientStop Color="#FEB0B0B0" Offset="0.996"/>
+                    <GradientStop Color="#FEF8F8F8" Offset="1"/>
+                    <GradientStop Color="#FEF9F9F9" Offset="0"/>
+                    <GradientStop Color="#FEFFFFFF" Offset="0"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Border.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFC89090" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.OpacityMask>
+            <Grid Margin="-29,14,8,4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="19*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Mã Sinh Viên" VerticalAlignment="Top" Height="28" Margin="42,2,14,0"/>
+                <TextBox x:Name="tb_msv" Margin="134,7,11,0" VerticalAlignment="Top"  Background="White" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" >
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.318"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+
+                <Label Content="Tên Sinh Viên" VerticalAlignment="Top" Height="28" Margin="42,34,0,0"/>
+                <TextBox x:Name="tb_ten" Margin="134,39,11,0" VerticalAlignment="Top" AutomationProperties.Name="ten_sv" Grid.ColumnSpan="3"/>
+
+                <Label Content="Ngày Sinh" VerticalAlignment="Top" Height="28" Margin="42,67,14,0" RenderTransformOrigin="0.832,0.591"/>
+
+                <Label Content="Ngày :" VerticalAlignment="Top" Height="28" Margin="129,65,104,0" RenderTransformOrigin="0.832,0.591" Grid.ColumnSpan="2"/>
+                <ComboBox x:Name="cb_ngay" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="39" Margin="23,70,0,0" Height="19">
+                    <ComboBoxItem>1</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+                    <ComboBoxItem>3</ComboBoxItem>
+                    <ComboBoxItem>4</ComboBoxItem>
+                    <ComboBoxItem>5</ComboBoxItem>
+                    <ComboBoxItem>6</ComboBoxItem>
+                    <ComboBoxItem>7</ComboBoxItem>
+                    <ComboBoxItem>8</ComboBoxItem>
+                    <ComboBoxItem>9</ComboBoxItem>
+                    <ComboBoxItem>10</ComboBoxItem>
+                    <ComboBoxItem>11</ComboBoxItem>
+                    <ComboBoxItem>12</ComboBoxItem>
+                    <ComboBoxItem>13</ComboBoxItem>
+                    <ComboBoxItem>14</ComboBoxItem>
+                    <ComboBoxItem>15</ComboBoxItem>
+                    <ComboBoxItem>16</ComboBoxItem>
+                    <ComboBoxItem>17</ComboBoxItem>
+                    <ComboBoxItem>18</ComboBoxItem>
+                    <ComboBoxItem>19</ComboBoxItem>
+                    <ComboBoxItem>20</ComboBoxItem>
+                    <ComboBoxItem>21</ComboBoxItem>
+                    <ComboBoxItem>22</ComboBoxItem>
+                    <ComboBoxItem>23</ComboBoxItem>
+                    <ComboBoxItem>24</ComboBoxItem>
+                    <ComboBoxItem>25</ComboBoxItem>
+                    <ComboBoxItem>26</ComboBoxItem>
+                    <ComboBoxItem>27</ComboBoxItem>
+                    <ComboBoxItem>28</ComboBoxItem>
+                    <ComboBoxItem>29</ComboBoxItem>
+                    <ComboBoxItem>30</ComboBoxItem>
+                    <ComboBoxItem>31</ComboBoxItem>
+                </ComboBox>
+
+                <Label Content="Tháng :" VerticalAlignment="Top" Height="28" Margin="62,66,15,0" RenderTransformOrigin="0.832,0.591" Grid.Column="1"/>
+                <ComboBox x:Name="cb_thang" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Margin="108,70,0,0" Height="20" Grid.ColumnSpan="2">
+                    <ComboBoxItem>1</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+                    <ComboBoxItem>3</ComboBoxItem>
+                    <ComboBoxItem>4</ComboBoxItem>
+                    <ComboBoxItem>5</ComboBoxItem>
+                    <ComboBoxItem>6</ComboBoxItem>
+                    <ComboBoxItem>7</ComboBoxItem>
+                    <ComboBoxItem>8</ComboBoxItem>
+                    <ComboBoxItem>9</ComboBoxItem>
+                    <ComboBoxItem>10</ComboBoxItem>
+                    <ComboBoxItem>11</ComboBoxItem>
+                    <ComboBoxItem>12</ComboBoxItem>
+                </ComboBox>
+                <Label Content="Năm :" VerticalAlignment="Top" Height="28" Margin="129,98,59,0" RenderTransformOrigin="0.832,0.591" Grid.ColumnSpan="2"/>
+                <ComboBox x:Name="cb_nam" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="23,102,0,0" Height="20">
+                    <ComboBoxItem>2005</ComboBoxItem>
+                    <ComboBoxItem>2004</ComboBoxItem>
+                    <ComboBoxItem>2003</ComboBoxItem>
+                    <ComboBoxItem>2002</ComboBoxItem>
+                    <ComboBoxItem>2001</ComboBoxItem>
+                    <ComboBoxItem>2000</ComboBoxItem>
+                    <ComboBoxItem>1999</ComboBoxItem>
+                </ComboBox>
+
+                <Label Content="Giới Tính" VerticalAlignment="Top" Height="28" Margin="42,132,14,0"/>
+                <RadioButton x:Name="rd_nam" Content="Nam" HorizontalAlignment="Left" Margin="136,139,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                <RadioButton x:Name="rd_nu" Grid.Column="1" Content="Nữ" HorizontalAlignment="Left" Margin="58,139,0,0" VerticalAlignment="Top"/>
+
+                <Label Content="Mã Quê" VerticalAlignment="Top" Height="28" Margin="42,167,55,0"/>
+                <ComboBox x:Name="cb_que" Margin="133,170,12,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+
+                <Label Content="Mã Khóa" VerticalAlignment="Top" Height="28" Margin="41,207,29,0"/>
+                <ComboBox x:Name="cb_khoa" Margin="133,210,12,0" VerticalAlignment="Top" Grid.ColumnSpan="3" SelectionChanged="cb_khoa_SelectionChanged"/>
+
+                <Label Content="Mã Lớp" VerticalAlignment="Top" Height="28" Margin="42,245,0,0" HorizontalAlignment="Left" Width="102"/>
+                <ComboBox x:Name="cb_lop" Margin="133,249,12,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+
+
+                <Button x:Name="btn_traphong" Content="Trả Phòng" Height="32"  Background="#FF8C8C8C" Margin="210,164,-256,104" Grid.Column="2" Click="btn_traphong_Click"/>
+
+                <Button x:Name="btn_sua" Content="Sửa" Height="32"  Background="#FF8C8C8C" Margin="94,164,-140,104"  Grid.Column="2" Click="btn_sua_Click"/>
+
+
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
